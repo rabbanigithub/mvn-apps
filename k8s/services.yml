@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: javaapp
+  name: mvn-apps-service
 spec:
   selector:
-    app: javaapp
+    app: mvn-apps
   ports:
   - protocol: TCP
     port: 80
