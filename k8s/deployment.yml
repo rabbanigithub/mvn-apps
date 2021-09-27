@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: javaapp
+  name: mvn-apps
 spec:
   replicas: 3
   strategy:
@@ -11,14 +11,14 @@ spec:
       maxUnavailable: 25%
   selector:
     matchLabels:
-      app: javaapp
+      app: mvn-apps
   template:
     metadata:
       labels:
-        app: javaapp
+        app: mvn-apps
     spec:
       containers:
-      - image: kammana/javaapp:3cab242
-        name: javaapp
+      - image: rabbanidocker/mvn-apps
+        name: mvn-apps
         ports:
         - containerPort: 8080
